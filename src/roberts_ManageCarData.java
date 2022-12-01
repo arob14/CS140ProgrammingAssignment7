@@ -37,7 +37,10 @@ class roberts_ManageCarData implements ManageCarDataFunctions
 	}
 
 	public ArrayList<CarFunctions> getCarList() {
-		ArrayList<CarFunctions> tempCarList = new ArrayList<>(carList);
+		ArrayList<CarFunctions> tempCarList = new ArrayList<>();
+		for(CarFunctions currentCar : carList) {
+			tempCarList.add(currentCar);
+		}
 		return tempCarList;
 	}
 
@@ -73,10 +76,50 @@ class roberts_ManageCarData implements ManageCarDataFunctions
 	}
 
 	public ArrayList<String> getCarListByTotalRangeViaPoll(double minTotalRange, double maxTotalRange) {
-		return ManageCarDataFunctions.super.getCarListByTotalRangeViaPoll(minTotalRange, maxTotalRange);
+		ArrayList<String> tempCarList = new ArrayList<>();
+		PriorityQueue<CarFunctions> tempCarListByTotalRange = getCarListByTotalRange();
+		for(int i = 0; i < carList.size(); i++) {
+			CarFunctions currentCar = tempCarListByTotalRange.poll();
+			String currentCarString = currentCar.toString();
+			String index = "";
+			String sameEconomy = "";
+			if (currentCar.getTotalRangeInMiles() >= minTotalRange && currentCar.getTotalRangeInMiles() <= maxTotalRange) {
+				for(int j = 0; j < carList.size(); j++) {
+					if (carList.get(j).equals(currentCar)) {
+						index += "\t" + j;
+					}
+					if(currentCar.getFuelEconomyInMilesPerGallon() == carList.get(j).getFuelEconomyInMilesPerGallon()) {
+						sameEconomy += "\t" + j;
+					}
+				}
+				currentCarString += index + sameEconomy;
+				tempCarList.add(currentCarString);
+			}
+		}
+		return tempCarList;
 	}
 
 	public ArrayList<String> getCarListByRemainingRangeViaPoll(double minRemainingRange, double maxRemainingRange) {
-		return ManageCarDataFunctions.super.getCarListByRemainingRangeViaPoll(minRemainingRange, maxRemainingRange);
+		ArrayList<String> tempCarList = new ArrayList<>();
+		PriorityQueue<CarFunctions> tempCarListByRemainingRange = getCarListByRemainingRange();
+		for(int i = 0; i < carList.size(); i++) {
+			CarFunctions currentCar = tempCarListByRemainingRange.poll();
+			String currentCarString = currentCar.toString();
+			String index = "";
+			String sameEconomy = "";
+			if (currentCar.getRemainingRangeInMiles() >= minRemainingRange && currentCar.getRemainingRangeInMiles() <= maxRemainingRange) {
+				for(int j = 0; j < carList.size(); j++) {
+					if (carList.get(j).equals(currentCar)) {
+						index += "\t" + j;
+					}
+					if(currentCar.getFuelEconomyInMilesPerGallon() == carList.get(j).getFuelEconomyInMilesPerGallon()) {
+						sameEconomy += "\t" + j;
+					}
+				}
+				currentCarString += index + sameEconomy;
+				tempCarList.add(currentCarString);
+			}
+		}
+		return tempCarList;
 	}
 }

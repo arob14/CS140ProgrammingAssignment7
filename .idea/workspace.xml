@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67eddcfd-1941-4254-b485-49849487275b" name="Changes" comment="implemented RemainingRangeComparator">
+    <list default="true" id="67eddcfd-1941-4254-b485-49849487275b" name="Changes" comment="implemented getCarList, getCarListByTotalRange (with and without iterator), getCarListByRemainingRainge (normal and iterator)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/roberts_ManageCarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roberts_ManageCarData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testCarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testCarData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,16 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="testCarData sample 2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="testCarData" />
+      <module name="CS140ProgrammingAssignment7" />
+      <option name="PROGRAM_PARAMETERS" value="src/sample_data2.txt 700 1000 400 600" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669163982213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implemented getCarList, getCarListByTotalRange (with and without iterator), getCarListByRemainingRainge (normal and iterator)">
+      <created>1669923719319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669923719320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,6 +92,45 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added files" />
     <MESSAGE value="implemented RemainingRangeComparator" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented RemainingRangeComparator" />
+    <MESSAGE value="implemented getCarList, getCarListByTotalRange (with and without iterator), getCarListByRemainingRainge (normal and iterator)" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented getCarList, getCarListByTotalRange (with and without iterator), getCarListByRemainingRainge (normal and iterator)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/roberts_ManageCarData.java</url>
+          <line>16</line>
+          <properties class="roberts_ManageCarData" method="readData">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/roberts_ManageCarData.java</url>
+          <line>77</line>
+          <properties class="roberts_ManageCarData" method="getCarListByTotalRangeViaPoll">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/testCarData.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/roberts_ManageCarData.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
