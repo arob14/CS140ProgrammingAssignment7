@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67eddcfd-1941-4254-b485-49849487275b" name="Changes" comment="added files">
+    <list default="true" id="67eddcfd-1941-4254-b485-49849487275b" name="Changes" comment="implemented RemainingRangeComparator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemainingRangeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemainingRangeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/roberts_ManageCarData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/roberts_ManageCarData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668800836061</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implemented RemainingRangeComparator">
+      <created>1669163982212</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669163982213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -66,6 +73,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added files" />
+    <MESSAGE value="implemented RemainingRangeComparator" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented RemainingRangeComparator" />
   </component>
 </project>

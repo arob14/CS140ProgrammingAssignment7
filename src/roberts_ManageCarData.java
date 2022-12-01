@@ -13,15 +13,7 @@ class roberts_ManageCarData implements ManageCarDataFunctions
 		this.carListByTotalRange = new PriorityQueue<>(new TotalRangeComparator());
 		this.carListByRemainingRange = new PriorityQueue<>(new RemainingRangeComparator());
 	}
-	
-	public ArrayList<CarFunctions> getCarList() {
-		ArrayList<CarFunctions> tempCarList = new ArrayList<>();
-		for (int i = 0; i < carList.size(); i++) {
-			tempCarList.add(carList.get(i));
-		}
-		return tempCarList;
-	}
-	
+
 	public void readData(String filename) {
 		try {
 			java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(filename)));
@@ -40,7 +32,51 @@ class roberts_ManageCarData implements ManageCarDataFunctions
 			}
 		}
 		catch (Exception e) {
-			
+
 		}
+	}
+
+	public ArrayList<CarFunctions> getCarList() {
+		ArrayList<CarFunctions> tempCarList = new ArrayList<>(carList);
+		return tempCarList;
+	}
+
+	public PriorityQueue<CarFunctions> getCarListByTotalRange() {
+		PriorityQueue<CarFunctions> tempCarListByTotalRange= new PriorityQueue<>(new TotalRangeComparator());
+		tempCarListByTotalRange.addAll(carList);
+		return tempCarListByTotalRange;
+	}
+
+
+	public ArrayList<CarFunctions> getCarListByTotalRangeUsingIterator() {
+		ArrayList<CarFunctions> tempCarList = new ArrayList<>();
+		Iterator<CarFunctions> it = carListByTotalRange.iterator();
+		while (it.hasNext()) {
+			tempCarList.add(it.next());
+		}
+		return tempCarList;
+	}
+
+	public PriorityQueue<CarFunctions> getCarListByRemainingRange() {
+		PriorityQueue<CarFunctions> tempCarListByRemainingRange= new PriorityQueue<>(new RemainingRangeComparator());
+		tempCarListByRemainingRange.addAll(carList);
+		return tempCarListByRemainingRange;
+	}
+
+	public ArrayList<CarFunctions> getCarListByRemainingRangeUsingIterator() {
+		ArrayList<CarFunctions> tempCarList = new ArrayList<>();
+		Iterator<CarFunctions> it = carListByRemainingRange.iterator();
+		while (it.hasNext()) {
+			tempCarList.add(it.next());
+		}
+		return tempCarList;
+	}
+
+	public ArrayList<String> getCarListByTotalRangeViaPoll(double minTotalRange, double maxTotalRange) {
+		return ManageCarDataFunctions.super.getCarListByTotalRangeViaPoll(minTotalRange, maxTotalRange);
+	}
+
+	public ArrayList<String> getCarListByRemainingRangeViaPoll(double minRemainingRange, double maxRemainingRange) {
+		return ManageCarDataFunctions.super.getCarListByRemainingRangeViaPoll(minRemainingRange, maxRemainingRange);
 	}
 }
